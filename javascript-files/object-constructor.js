@@ -57,6 +57,52 @@ book2.describeBook();
 
 */
 
+// ANOTHER EXAMPLE
+
+function BattleRapper() {
+
+}
+
+BattleRapper.prototype.sayName = function() {
+  console.log(`Good Morning! I'm ${this.name}!`);
+}
+
+BattleRapper.prototype.revealLocation = function() {
+  console.log(`${this.name} is living in ${this.location}`);
+}
+
+BattleRapper.prototype.revealAge = function() {
+  console.log(`${this.name} is ${this.age} years old!`);
+}
+
+BattleRapper.prototype.sayGirlfriend = function() {
+  console.log(`${this.girlfriendName} is his GF!`)
+}
+
+
+
+function FlipTopEmcee(name, age, reppin, location) {
+  this.name = name;
+  this.age = age;
+  this.reppin = reppin;
+  this.location = location;
+}
+
+
+
+FlipTopEmcee.prototype = Object.create(BattleRapper.prototype)
+
+const akt = new FlipTopEmcee("AKT", null, null, "Olongapo");
+akt.sayName();
+akt.revealLocation();
+akt.revealAge();
+akt.sayGirlfriend();
+
+const loonie = new FlipTopEmcee("Loonie", 35, "Stick Figgas", "Pasig")
+loonie.sayName();
+loonie.revealLocation();
+loonie.revealAge();
+loonie.sayGirlfriend();
 
 
 

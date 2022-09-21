@@ -13,11 +13,9 @@ Student.prototype.sayName = function() {
   console.log(this.name)
 }
 
-
 // Student.prototype.sayAge = function() {
 //   console.log(this.age)
 // }
-
 
 function EightGrader(name) {
   this.name = name;
@@ -30,6 +28,8 @@ EightGrader.prototype = Object.create(Student.prototype)
 const carl = new EightGrader("carl");
 carl.sayName();
 console.log(carl.grade)
+
+
 
 
 
